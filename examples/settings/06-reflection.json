@@ -1,0 +1,39 @@
+{
+  "light": {
+    "exposure": 0.7,
+    "contrast": 14,
+    "highlights": -50,
+    "shadows": 35,
+    "whites": 10,
+    "blacks": -15
+  },
+  "wb": {
+    "mode": "custom",
+    "scale": "kelvin",
+    "temp": 4800,
+    "tint": 4
+  },
+  "color": {
+    "vibrance": 14
+  },
+  "grading": {
+    "balance": -6,
+    "shadows": {
+      "hue": 210,
+      "sat": 14,
+      "lum": -3
+    },
+    "highlights": {
+      "hue": 40,
+      "sat": 10,
+      "lum": 3
+    }
+  },
+  "detail": {
+    "sharpen_amount": 40,
+    "sharpen_masking": 45,
+    "nr_luminance": 18,
+    "nr_color": 25
+  },
+  "_comment": "Manual grade, no develop.auto / preset.apply. Xiaomi 13 Ultra DNG."
+}

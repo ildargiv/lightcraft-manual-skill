@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ildargiv.github.io/lightcraft-manual-skill/sitemap.xml

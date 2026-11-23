@@ -1,0 +1,42 @@
+{
+  "light": {
+    "exposure": 0.15,
+    "contrast": 16,
+    "highlights": -55,
+    "shadows": 30,
+    "whites": 12,
+    "blacks": -12
+  },
+  "hdr": {
+    "enabled": true,
+    "max_ev": 2.5,
+    "sdr_brightness": 4,
+    "sdr_contrast": 8,
+    "sdr_highlights": -20,
+    "sdr_shadows": 15,
+    "sdr_whites": 6
+  },
+  "color": {
+    "vibrance": 16
+  },
+  "effects": {
+    "clarity": 10,
+    "dehaze": 8
+  },
+  "mixer": {
+    "orange": {
+      "sat": 8,
+      "lum": 4
+    },
+    "blue": {
+      "sat": 6,
+      "lum": -6
+    }
+  },
+  "detail": {
+    "sharpen_amount": 45,
+    "sharpen_masking": 42,
+    "nr_color": 20
+  },
+  "_comment": "Manual grade, no develop.auto / preset.apply. Xiaomi 13 Ultra DNG."
+}

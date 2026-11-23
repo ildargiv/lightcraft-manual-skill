@@ -1,0 +1,25 @@
+{
+  "light": {
+    "exposure": 0.55,
+    "contrast": 10,
+    "highlights": -35,
+    "shadows": 45,
+    "whites": 12,
+    "blacks": -18
+  },
+  "color": {
+    "vibrance": 12
+  },
+  "effects": {
+    "texture": 6,
+    "clarity": 10,
+    "dehaze": 8
+  },
+  "detail": {
+    "sharpen_amount": 35,
+    "sharpen_masking": 50,
+    "nr_luminance": 15,
+    "nr_color": 22
+  },
+  "_comment": "Manual grade, no develop.auto / preset.apply. Xiaomi 13 Ultra DNG."
+}
