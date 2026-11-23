@@ -101,21 +101,36 @@ powershell -ExecutionPolicy Bypass -File &lt;skills&gt;/lightcraft/scripts/start
 <tr><td><code>references/addons.md</code></td><td>Complementos, modelos e projetos da comunidade</td></tr>
 <tr><td><code>scripts/*</code></td><td>Iniciador MCP, iniciador do app, atualização, inventário</td></tr>
 </tbody></table>
-<h2>Exemplos</h2>
-<p>Três DNGs Xiaomi 13 Ultra da mesma sessão (rio perto do porto), revelados à mão. Cada JPEG foi gerado com <code>lightcraft-cli render</code> a partir do <code>original.dng</code> correspondente e do JSON de ajustes exato — sem <code>develop.auto</code>, sem <code>preset.apply</code>, sem alinhamento automático nem detecção de sujeito.</p>
-<h3>01 — Rio HDR, gradiente de céu e máscara local de árvores</h3>
-<p><img src="../examples/01-river-hdr/before.jpg" alt="antes" loading="lazy"></p>
-<p><img src="../examples/01-river-hdr/after.jpg" alt="depois" loading="lazy"></p>
-<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/01-river-hdr/original.dng">original.dng</a> · <a href="../examples/settings/01-river-hdr.json">ajustes manuais</a> · <a href="../examples/01-river-hdr/after-hdr-gainmap.jpg">JPEG com gain map HDR</a></li><li>Headroom de 3,5 EV, rendição SDR ajustada separadamente, máscara <code>linear</code> de céu + <code>radial</code> de árvores.</li></ul>
-<h3>02 — Hora azul, WB manual e graduação dividida</h3>
-<p><img src="../examples/02-blue-hour/before.jpg" alt="antes" loading="lazy"></p>
-<p><img src="../examples/02-blue-hour/after.jpg" alt="depois" loading="lazy"></p>
-<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/02-blue-hour/original.dng">original.dng</a> · <a href="../examples/settings/02-blue-hour.json">ajustes manuais</a></li><li>WB 4200 K / +6 tint definido à mão, sombras frias contra luzes quentes, NR 20/28.</li></ul>
-<h3>03 — Hora dourada, máscara quente local</h3>
-<p><img src="../examples/03-golden-river/before.jpg" alt="antes" loading="lazy"></p>
-<p><img src="../examples/03-golden-river/after.jpg" alt="depois" loading="lazy"></p>
-<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/03-golden-river/original.dng">original.dng</a> · <a href="../examples/settings/03-golden-river.json">ajustes manuais</a></li><li>Luzes −50, sombras +35, mixer laranja/amarelo, máscara radial suave na folhagem.</li></ul>
-<p>Todas as exportações usam <code>metadata=none</code>, 1400 px na maior borda e qualidade JPEG 88. O exemplo HDR contém ainda um gain map ISO 21496-1 (marcador <code>hdrgm</code> verificado).</p>
+<p>Seven Xiaomi 13 Ultra RAW photos from one city shoot, developed by hand. No <code>develop.auto</code>, no <code>preset.apply</code>, no automatic straightening or subject detection. Each result comes with its exact settings JSON so you can reproduce it with <code>lightcraft-cli render</code>.</p>
+<h3>River HDR: headroom 3.5 EV, gradient sky mask, local tree mask</h3>
+<p><img src="../examples/01-river-hdr/before.jpg" alt="River HDR: headroom 3.5 EV, gradient sky mask, local tree mask — antes" loading="lazy"></p>
+<p><img src="../examples/01-river-hdr/after.jpg" alt="River HDR: headroom 3.5 EV, gradient sky mask, local tree mask — depois" loading="lazy"></p>
+<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/01-river-hdr/original.dng">RAW original</a> · <a href="../examples/settings/01-river-hdr.json">ajustes manuais</a></li></ul>
+<h3>Flower shop at blue hour: manual 4200 K balance and split grading</h3>
+<p><img src="../examples/02-blue-hour/before.jpg" alt="Flower shop at blue hour: manual 4200 K balance and split grading — antes" loading="lazy"></p>
+<p><img src="../examples/02-blue-hour/after.jpg" alt="Flower shop at blue hour: manual 4200 K balance and split grading — depois" loading="lazy"></p>
+<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/02-blue-hour/original.dng">RAW original</a> · <a href="../examples/settings/02-blue-hour.json">ajustes manuais</a></li></ul>
+<h3>Bell tower at blue hour: cool shadows, warm windows, shadow recovery</h3>
+<p><img src="../examples/03-blue-hour-tower/before.jpg" alt="Bell tower at blue hour: cool shadows, warm windows, shadow recovery — antes" loading="lazy"></p>
+<p><img src="../examples/03-blue-hour-tower/after.jpg" alt="Bell tower at blue hour: cool shadows, warm windows, shadow recovery — depois" loading="lazy"></p>
+<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/03-blue-hour-tower/original.dng">RAW original</a> · <a href="../examples/settings/03-blue-hour-tower.json">ajustes manuais</a></li></ul>
+<h3>Old town at dusk: 4300 K by hand, architecture and street lights</h3>
+<p><img src="../examples/04-old-town/before.jpg" alt="Old town at dusk: 4300 K by hand, architecture and street lights — antes" loading="lazy"></p>
+<p><img src="../examples/04-old-town/after.jpg" alt="Old town at dusk: 4300 K by hand, architecture and street lights — depois" loading="lazy"></p>
+<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/04-old-town/original.dng">RAW original</a> · <a href="../examples/settings/04-old-town.json">ajustes manuais</a></li></ul>
+<h3>Golden moose and city lights: controlled highlights, warm/cool grading</h3>
+<p><img src="../examples/05-golden-moose/before.jpg" alt="Golden moose and city lights: controlled highlights, warm/cool grading — antes" loading="lazy"></p>
+<p><img src="../examples/05-golden-moose/after.jpg" alt="Golden moose and city lights: controlled highlights, warm/cool grading — depois" loading="lazy"></p>
+<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/05-golden-moose/original.dng">RAW original</a> · <a href="../examples/settings/05-golden-moose.json">ajustes manuais</a></li></ul>
+<h3>Night road with bokeh: 4000 K, noise control 25/30, light trails</h3>
+<p><img src="../examples/06-night-bokeh/before.jpg" alt="Night road with bokeh: 4000 K, noise control 25/30, light trails — antes" loading="lazy"></p>
+<p><img src="../examples/06-night-bokeh/after.jpg" alt="Night road with bokeh: 4000 K, noise control 25/30, light trails — depois" loading="lazy"></p>
+<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/06-night-bokeh/original.dng">RAW original</a> · <a href="../examples/settings/06-night-bokeh.json">ajustes manuais</a></li></ul>
+<h3>Evening street: mixed lighting balanced manually, no Auto WB</h3>
+<p><img src="../examples/07-evening-street/before.jpg" alt="Evening street: mixed lighting balanced manually, no Auto WB — antes" loading="lazy"></p>
+<p><img src="../examples/07-evening-street/after.jpg" alt="Evening street: mixed lighting balanced manually, no Auto WB — depois" loading="lazy"></p>
+<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/07-evening-street/original.dng">RAW original</a> · <a href="../examples/settings/07-evening-street.json">ajustes manuais</a></li></ul>
+<p>All exports: <code>metadata=none</code>, 1400 px long edge, JPEG quality 88. The HDR example additionally writes an ISO 21496-1 gain map (<code>hdrgm</code> marker verified).</p>
 <h2>Verifique você mesmo</h2>
 <pre><code>
 python scripts/addon-inventory.py

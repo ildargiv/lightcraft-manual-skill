@@ -79,39 +79,68 @@ powershell -ExecutionPolicy Bypass -File <skills>/lightcraft/scripts/start-light
 | `references/addons.md` | Modules, modèles et projets communautaires |
 | `scripts/*` | Lanceur MCP, lanceur d'app, rafraîchissement, inventaire |
 
-## Exemples
+Seven Xiaomi 13 Ultra RAW photos from one city shoot, developed by hand. No `develop.auto`,
+no `preset.apply`, no automatic straightening or subject detection. Each result comes with
+its exact settings JSON so you can reproduce it with `lightcraft-cli render`.
 
-Trois DNG Xiaomi 13 Ultra d'une même séance (rivière près du port), développés à la main. Chaque JPEG a été produit par `lightcraft-cli render` depuis l'`original.dng` correspondant et le JSON de réglages exact — sans `develop.auto`, sans `preset.apply`, sans redressement automatique ni détection de sujet.
+### River HDR: headroom 3.5 EV, gradient sky mask, local tree mask
 
-### 01 — Rivière HDR, dégradé de ciel et masque local sur les arbres
+![River HDR: headroom 3.5 EV, gradient sky mask, local tree mask — avant](../examples/01-river-hdr/before.jpg)
 
-![avant](../examples/01-river-hdr/before.jpg)
+![River HDR: headroom 3.5 EV, gradient sky mask, local tree mask — après](../examples/01-river-hdr/after.jpg)
 
-![après](../examples/01-river-hdr/after.jpg)
+- [RAW original](../examples/01-river-hdr/original.dng) · [réglages manuels](../examples/settings/01-river-hdr.json)
 
-- [original.dng](../examples/01-river-hdr/original.dng) · [réglages manuels](../examples/settings/01-river-hdr.json) · [JPEG avec gain map HDR](../examples/01-river-hdr/after-hdr-gainmap.jpg)
-- Réserve de 3,5 EV, rendu SDR réglé séparément, masque `linear` pour le ciel et `radial` pour les arbres.
+### Flower shop at blue hour: manual 4200 K balance and split grading
 
-### 02 — Heure bleue, WB manuel et coloration split
+![Flower shop at blue hour: manual 4200 K balance and split grading — avant](../examples/02-blue-hour/before.jpg)
 
-![avant](../examples/02-blue-hour/before.jpg)
+![Flower shop at blue hour: manual 4200 K balance and split grading — après](../examples/02-blue-hour/after.jpg)
 
-![après](../examples/02-blue-hour/after.jpg)
+- [RAW original](../examples/02-blue-hour/original.dng) · [réglages manuels](../examples/settings/02-blue-hour.json)
 
-- [original.dng](../examples/02-blue-hour/original.dng) · [réglages manuels](../examples/settings/02-blue-hour.json)
-- WB 4200 K / +6 tint à la main, ombres froides contre hautes lumières chaudes, NR 20/28.
+### Bell tower at blue hour: cool shadows, warm windows, shadow recovery
 
-### 03 — Heure dorée, masque chaud local
+![Bell tower at blue hour: cool shadows, warm windows, shadow recovery — avant](../examples/03-blue-hour-tower/before.jpg)
 
-![avant](../examples/03-golden-river/before.jpg)
+![Bell tower at blue hour: cool shadows, warm windows, shadow recovery — après](../examples/03-blue-hour-tower/after.jpg)
 
-![après](../examples/03-golden-river/after.jpg)
+- [RAW original](../examples/03-blue-hour-tower/original.dng) · [réglages manuels](../examples/settings/03-blue-hour-tower.json)
 
-- [original.dng](../examples/03-golden-river/original.dng) · [réglages manuels](../examples/settings/03-golden-river.json)
-- Hautes lumières −50, ombres +35, mélangeur orange/jaune, masque radial doux sur le feuillage.
+### Old town at dusk: 4300 K by hand, architecture and street lights
 
-Tous les exports utilisent `metadata=none`, 1400 px sur le grand côté et une qualité JPEG de 88. L'exemple HDR contient en plus une gain map ISO 21496-1 (marqueur `hdrgm` vérifié).
+![Old town at dusk: 4300 K by hand, architecture and street lights — avant](../examples/04-old-town/before.jpg)
 
+![Old town at dusk: 4300 K by hand, architecture and street lights — après](../examples/04-old-town/after.jpg)
+
+- [RAW original](../examples/04-old-town/original.dng) · [réglages manuels](../examples/settings/04-old-town.json)
+
+### Golden moose and city lights: controlled highlights, warm/cool grading
+
+![Golden moose and city lights: controlled highlights, warm/cool grading — avant](../examples/05-golden-moose/before.jpg)
+
+![Golden moose and city lights: controlled highlights, warm/cool grading — après](../examples/05-golden-moose/after.jpg)
+
+- [RAW original](../examples/05-golden-moose/original.dng) · [réglages manuels](../examples/settings/05-golden-moose.json)
+
+### Night road with bokeh: 4000 K, noise control 25/30, light trails
+
+![Night road with bokeh: 4000 K, noise control 25/30, light trails — avant](../examples/06-night-bokeh/before.jpg)
+
+![Night road with bokeh: 4000 K, noise control 25/30, light trails — après](../examples/06-night-bokeh/after.jpg)
+
+- [RAW original](../examples/06-night-bokeh/original.dng) · [réglages manuels](../examples/settings/06-night-bokeh.json)
+
+### Evening street: mixed lighting balanced manually, no Auto WB
+
+![Evening street: mixed lighting balanced manually, no Auto WB — avant](../examples/07-evening-street/before.jpg)
+
+![Evening street: mixed lighting balanced manually, no Auto WB — après](../examples/07-evening-street/after.jpg)
+
+- [RAW original](../examples/07-evening-street/original.dng) · [réglages manuels](../examples/settings/07-evening-street.json)
+
+All exports: `metadata=none`, 1400 px long edge, JPEG quality 88. The HDR example
+additionally writes an ISO 21496-1 gain map (`hdrgm` marker verified).
 ## Vérifiez par vous-même
 
 ```powershell

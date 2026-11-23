@@ -1,0 +1,38 @@
+{
+  "light": {
+    "exposure": 0.4,
+    "contrast": 14,
+    "highlights": -40,
+    "shadows": 25,
+    "whites": 10,
+    "blacks": -12
+  },
+  "wb": {
+    "mode": "custom",
+    "scale": "kelvin",
+    "temp": 4300,
+    "tint": 4
+  },
+  "color": {
+    "vibrance": 10
+  },
+  "effects": {
+    "clarity": 8,
+    "dehaze": 8
+  },
+  "grading": {
+    "balance": -6,
+    "shadows": {
+      "hue": 215,
+      "sat": 12,
+      "lum": -3
+    }
+  },
+  "detail": {
+    "nr_luminance": 18,
+    "nr_color": 22,
+    "sharpen_amount": 35,
+    "sharpen_masking": 50
+  },
+  "_comment": "Old town at dusk — manual grade, no develop.auto / preset.apply."
+}

@@ -79,39 +79,68 @@ powershell -ExecutionPolicy Bypass -File <skills>/lightcraft/scripts/start-light
 | `references/addons.md` | 애드온, 모델, 커뮤니티 프로젝트 |
 | `scripts/*` | MCP 실행기, 앱 실행기, 문서 갱신, 애드온 목록 |
 
-## 예제
+Seven Xiaomi 13 Ultra RAW photos from one city shoot, developed by hand. No `develop.auto`,
+no `preset.apply`, no automatic straightening or subject detection. Each result comes with
+its exact settings JSON so you can reproduce it with `lightcraft-cli render`.
 
-한 촬영에서 나온 Xiaomi 13 Ultra DNG 3장을 손으로 현상했습니다. 각 JPEG는 해당 `original.dng`와 정확한 설정 JSON으로 `lightcraft-cli render`를 사용해 생성했습니다 — `develop.auto`, `preset.apply`, 자동 수평 보정, 피사체 인식 모두 사용하지 않았습니다.
+### River HDR: headroom 3.5 EV, gradient sky mask, local tree mask
 
-### 01 — HDR 강, 하늘 그라데이션과 나무 로컬 마스크
+![River HDR: headroom 3.5 EV, gradient sky mask, local tree mask — 전](../examples/01-river-hdr/before.jpg)
 
-![before](../examples/01-river-hdr/before.jpg)
+![River HDR: headroom 3.5 EV, gradient sky mask, local tree mask — 후](../examples/01-river-hdr/after.jpg)
 
-![after](../examples/01-river-hdr/after.jpg)
+- [원본 RAW](../examples/01-river-hdr/original.dng) · [수동 설정](../examples/settings/01-river-hdr.json)
 
-- [original.dng](../examples/01-river-hdr/original.dng) · [수동 설정](../examples/settings/01-river-hdr.json) · [HDR 게인 맵 JPEG](../examples/01-river-hdr/after-hdr-gainmap.jpg)
-- 3.5 EV 헤드룸, SDR 렌디션 별도 조정, `linear` 하늘 마스크 + `radial` 나무 마스크.
+### Flower shop at blue hour: manual 4200 K balance and split grading
 
-### 02 — 블루아워, 수동 WB와 스플릿 그레이딩
+![Flower shop at blue hour: manual 4200 K balance and split grading — 전](../examples/02-blue-hour/before.jpg)
 
-![before](../examples/02-blue-hour/before.jpg)
+![Flower shop at blue hour: manual 4200 K balance and split grading — 후](../examples/02-blue-hour/after.jpg)
 
-![after](../examples/02-blue-hour/after.jpg)
+- [원본 RAW](../examples/02-blue-hour/original.dng) · [수동 설정](../examples/settings/02-blue-hour.json)
 
-- [original.dng](../examples/02-blue-hour/original.dng) · [수동 설정](../examples/settings/02-blue-hour.json)
-- WB 4200 K / +6 tint 수동 설정, 차가운 그림자와 따뜻한 하이라이트, NR 20/28.
+### Bell tower at blue hour: cool shadows, warm windows, shadow recovery
 
-### 03 — 골든아워, 따뜻한 로컬 마스크
+![Bell tower at blue hour: cool shadows, warm windows, shadow recovery — 전](../examples/03-blue-hour-tower/before.jpg)
 
-![before](../examples/03-golden-river/before.jpg)
+![Bell tower at blue hour: cool shadows, warm windows, shadow recovery — 후](../examples/03-blue-hour-tower/after.jpg)
 
-![after](../examples/03-golden-river/after.jpg)
+- [원본 RAW](../examples/03-blue-hour-tower/original.dng) · [수동 설정](../examples/settings/03-blue-hour-tower.json)
 
-- [original.dng](../examples/03-golden-river/original.dng) · [수동 설정](../examples/settings/03-golden-river.json)
-- 하이라이트 −50, 섀도 +35, 오렌지/옐로우 믹서, 부드러운 방사형 나뭇잎 마스크.
+### Old town at dusk: 4300 K by hand, architecture and street lights
 
-모든 내보내기는 `metadata=none`, 긴 변 1400px, JPEG 품질 88을 사용합니다. HDR 예제에는 ISO 21496-1 게인 맵(`hdrgm` 마커 확인됨)이 추가로 포함됩니다.
+![Old town at dusk: 4300 K by hand, architecture and street lights — 전](../examples/04-old-town/before.jpg)
 
+![Old town at dusk: 4300 K by hand, architecture and street lights — 후](../examples/04-old-town/after.jpg)
+
+- [원본 RAW](../examples/04-old-town/original.dng) · [수동 설정](../examples/settings/04-old-town.json)
+
+### Golden moose and city lights: controlled highlights, warm/cool grading
+
+![Golden moose and city lights: controlled highlights, warm/cool grading — 전](../examples/05-golden-moose/before.jpg)
+
+![Golden moose and city lights: controlled highlights, warm/cool grading — 후](../examples/05-golden-moose/after.jpg)
+
+- [원본 RAW](../examples/05-golden-moose/original.dng) · [수동 설정](../examples/settings/05-golden-moose.json)
+
+### Night road with bokeh: 4000 K, noise control 25/30, light trails
+
+![Night road with bokeh: 4000 K, noise control 25/30, light trails — 전](../examples/06-night-bokeh/before.jpg)
+
+![Night road with bokeh: 4000 K, noise control 25/30, light trails — 후](../examples/06-night-bokeh/after.jpg)
+
+- [원본 RAW](../examples/06-night-bokeh/original.dng) · [수동 설정](../examples/settings/06-night-bokeh.json)
+
+### Evening street: mixed lighting balanced manually, no Auto WB
+
+![Evening street: mixed lighting balanced manually, no Auto WB — 전](../examples/07-evening-street/before.jpg)
+
+![Evening street: mixed lighting balanced manually, no Auto WB — 후](../examples/07-evening-street/after.jpg)
+
+- [원본 RAW](../examples/07-evening-street/original.dng) · [수동 설정](../examples/settings/07-evening-street.json)
+
+All exports: `metadata=none`, 1400 px long edge, JPEG quality 88. The HDR example
+additionally writes an ISO 21496-1 gain map (`hdrgm` marker verified).
 ## 직접 확인하기
 
 ```powershell

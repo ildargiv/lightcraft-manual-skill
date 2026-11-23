@@ -1,0 +1,44 @@
+{
+  "light": {
+    "exposure": 0.5,
+    "contrast": 18,
+    "highlights": -45,
+    "shadows": 30,
+    "whites": 8,
+    "blacks": -18
+  },
+  "wb": {
+    "mode": "custom",
+    "scale": "kelvin",
+    "temp": 4200,
+    "tint": 8
+  },
+  "color": {
+    "vibrance": 12
+  },
+  "effects": {
+    "texture": 6,
+    "clarity": 10,
+    "dehaze": 5
+  },
+  "grading": {
+    "balance": -8,
+    "shadows": {
+      "hue": 215,
+      "sat": 14,
+      "lum": -4
+    },
+    "highlights": {
+      "hue": 35,
+      "sat": 10,
+      "lum": 3
+    }
+  },
+  "detail": {
+    "nr_luminance": 20,
+    "nr_color": 25,
+    "sharpen_amount": 35,
+    "sharpen_masking": 55
+  },
+  "_comment": "Bell tower at blue hour — manual grade, no develop.auto / preset.apply."
+}

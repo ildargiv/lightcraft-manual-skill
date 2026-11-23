@@ -101,21 +101,36 @@ powershell -ExecutionPolicy Bypass -File &lt;skills&gt;/lightcraft/scripts/start
 <tr><td><code>references/addons.md</code></td><td>アドオン、モデル、コミュニティプロジェクト</td></tr>
 <tr><td><code>scripts/*</code></td><td>MCP 起動、アプリ起動、資料更新、アドオン一覧</td></tr>
 </tbody></table>
-<h2>例</h2>
-<p>同じ撮影（港辺りの川）の Xiaomi 13 Ultra DNG 3 枚を手動で現像しました。各 JPEG は対応する <code>original.dng</code> と正確な設定 JSON から <code>lightcraft-cli render</code> で生成しています — <code>develop.auto</code> も <code>preset.apply</code> も自動水平補正も被写体検出も使っていません。</p>
-<h3>01 — HDR の川、空のグラデーションと木々のローカルマスク</h3>
-<p><img src="../examples/01-river-hdr/before.jpg" alt="before" loading="lazy"></p>
-<p><img src="../examples/01-river-hdr/after.jpg" alt="after" loading="lazy"></p>
-<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/01-river-hdr/original.dng">original.dng</a> · <a href="../examples/settings/01-river-hdr.json">手動設定</a> · <a href="../examples/01-river-hdr/after-hdr-gainmap.jpg">HDR ゲインマップ JPEG</a></li><li>ヘッドルーム 3.5 EV、SDR レンディションを個別調整、<code>linear</code> 空マスク + <code>radial</code> 木々マスク。</li></ul>
-<h3>02 — ブルーアワー、手動 WB とスプリットトーニング</h3>
-<p><img src="../examples/02-blue-hour/before.jpg" alt="before" loading="lazy"></p>
-<p><img src="../examples/02-blue-hour/after.jpg" alt="after" loading="lazy"></p>
-<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/02-blue-hour/original.dng">original.dng</a> · <a href="../examples/settings/02-blue-hour.json">手動設定</a></li><li>WB 4200 K / +6 tint を手で設定、冷たい影と暖かいハイライト、NR 20/28。</li></ul>
-<h3>03 — ゴールデンアワー、暖色のローカルマスク</h3>
-<p><img src="../examples/03-golden-river/before.jpg" alt="before" loading="lazy"></p>
-<p><img src="../examples/03-golden-river/after.jpg" alt="after" loading="lazy"></p>
-<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/03-golden-river/original.dng">original.dng</a> · <a href="../examples/settings/03-golden-river.json">手動設定</a></li><li>ハイライト −50、シャドウ +35、オレンジ/イエローミキサー、柔らかい放射状の葉マスク。</li></ul>
-<p>すべての書き出しは <code>metadata=none</code>、長辺 1400 px、JPEG 品質 88。HDR 例にはさらに ISO 21496-1 ゲインマップ（<code>hdrgm</code> マーカー確認済み）が含まれます。</p>
+<p>Seven Xiaomi 13 Ultra RAW photos from one city shoot, developed by hand. No <code>develop.auto</code>, no <code>preset.apply</code>, no automatic straightening or subject detection. Each result comes with its exact settings JSON so you can reproduce it with <code>lightcraft-cli render</code>.</p>
+<h3>River HDR: headroom 3.5 EV, gradient sky mask, local tree mask</h3>
+<p><img src="../examples/01-river-hdr/before.jpg" alt="River HDR: headroom 3.5 EV, gradient sky mask, local tree mask — 補正前" loading="lazy"></p>
+<p><img src="../examples/01-river-hdr/after.jpg" alt="River HDR: headroom 3.5 EV, gradient sky mask, local tree mask — 補正後" loading="lazy"></p>
+<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/01-river-hdr/original.dng">元 RAW</a> · <a href="../examples/settings/01-river-hdr.json">手動設定</a></li></ul>
+<h3>Flower shop at blue hour: manual 4200 K balance and split grading</h3>
+<p><img src="../examples/02-blue-hour/before.jpg" alt="Flower shop at blue hour: manual 4200 K balance and split grading — 補正前" loading="lazy"></p>
+<p><img src="../examples/02-blue-hour/after.jpg" alt="Flower shop at blue hour: manual 4200 K balance and split grading — 補正後" loading="lazy"></p>
+<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/02-blue-hour/original.dng">元 RAW</a> · <a href="../examples/settings/02-blue-hour.json">手動設定</a></li></ul>
+<h3>Bell tower at blue hour: cool shadows, warm windows, shadow recovery</h3>
+<p><img src="../examples/03-blue-hour-tower/before.jpg" alt="Bell tower at blue hour: cool shadows, warm windows, shadow recovery — 補正前" loading="lazy"></p>
+<p><img src="../examples/03-blue-hour-tower/after.jpg" alt="Bell tower at blue hour: cool shadows, warm windows, shadow recovery — 補正後" loading="lazy"></p>
+<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/03-blue-hour-tower/original.dng">元 RAW</a> · <a href="../examples/settings/03-blue-hour-tower.json">手動設定</a></li></ul>
+<h3>Old town at dusk: 4300 K by hand, architecture and street lights</h3>
+<p><img src="../examples/04-old-town/before.jpg" alt="Old town at dusk: 4300 K by hand, architecture and street lights — 補正前" loading="lazy"></p>
+<p><img src="../examples/04-old-town/after.jpg" alt="Old town at dusk: 4300 K by hand, architecture and street lights — 補正後" loading="lazy"></p>
+<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/04-old-town/original.dng">元 RAW</a> · <a href="../examples/settings/04-old-town.json">手動設定</a></li></ul>
+<h3>Golden moose and city lights: controlled highlights, warm/cool grading</h3>
+<p><img src="../examples/05-golden-moose/before.jpg" alt="Golden moose and city lights: controlled highlights, warm/cool grading — 補正前" loading="lazy"></p>
+<p><img src="../examples/05-golden-moose/after.jpg" alt="Golden moose and city lights: controlled highlights, warm/cool grading — 補正後" loading="lazy"></p>
+<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/05-golden-moose/original.dng">元 RAW</a> · <a href="../examples/settings/05-golden-moose.json">手動設定</a></li></ul>
+<h3>Night road with bokeh: 4000 K, noise control 25/30, light trails</h3>
+<p><img src="../examples/06-night-bokeh/before.jpg" alt="Night road with bokeh: 4000 K, noise control 25/30, light trails — 補正前" loading="lazy"></p>
+<p><img src="../examples/06-night-bokeh/after.jpg" alt="Night road with bokeh: 4000 K, noise control 25/30, light trails — 補正後" loading="lazy"></p>
+<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/06-night-bokeh/original.dng">元 RAW</a> · <a href="../examples/settings/06-night-bokeh.json">手動設定</a></li></ul>
+<h3>Evening street: mixed lighting balanced manually, no Auto WB</h3>
+<p><img src="../examples/07-evening-street/before.jpg" alt="Evening street: mixed lighting balanced manually, no Auto WB — 補正前" loading="lazy"></p>
+<p><img src="../examples/07-evening-street/after.jpg" alt="Evening street: mixed lighting balanced manually, no Auto WB — 補正後" loading="lazy"></p>
+<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/07-evening-street/original.dng">元 RAW</a> · <a href="../examples/settings/07-evening-street.json">手動設定</a></li></ul>
+<p>All exports: <code>metadata=none</code>, 1400 px long edge, JPEG quality 88. The HDR example additionally writes an ISO 21496-1 gain map (<code>hdrgm</code> marker verified).</p>
 <h2>自分で確認する</h2>
 <pre><code>
 python scripts/addon-inventory.py

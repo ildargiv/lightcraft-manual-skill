@@ -1,0 +1,37 @@
+{
+  "light": {
+    "exposure": 0.5,
+    "contrast": 12,
+    "highlights": -40,
+    "shadows": 30,
+    "whites": 8,
+    "blacks": -15
+  },
+  "wb": {
+    "mode": "custom",
+    "scale": "kelvin",
+    "temp": 4200,
+    "tint": 5
+  },
+  "color": {
+    "vibrance": 10
+  },
+  "effects": {
+    "clarity": 8
+  },
+  "grading": {
+    "balance": -6,
+    "shadows": {
+      "hue": 215,
+      "sat": 12,
+      "lum": -3
+    }
+  },
+  "detail": {
+    "nr_luminance": 20,
+    "nr_color": 25,
+    "sharpen_amount": 35,
+    "sharpen_masking": 50
+  },
+  "_comment": "Evening street and shop lights — manual grade, no develop.auto / preset.apply."
+}

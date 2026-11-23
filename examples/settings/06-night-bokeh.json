@@ -1,0 +1,43 @@
+{
+  "light": {
+    "exposure": 0.6,
+    "contrast": 18,
+    "highlights": -50,
+    "shadows": 25,
+    "whites": 10,
+    "blacks": -18
+  },
+  "wb": {
+    "mode": "custom",
+    "scale": "kelvin",
+    "temp": 4000,
+    "tint": 4
+  },
+  "color": {
+    "vibrance": 12
+  },
+  "effects": {
+    "dehaze": 10,
+    "clarity": 8
+  },
+  "grading": {
+    "balance": -10,
+    "highlights": {
+      "hue": 30,
+      "sat": 14,
+      "lum": 4
+    },
+    "shadows": {
+      "hue": 220,
+      "sat": 16,
+      "lum": -5
+    }
+  },
+  "detail": {
+    "nr_luminance": 25,
+    "nr_color": 30,
+    "sharpen_amount": 30,
+    "sharpen_masking": 60
+  },
+  "_comment": "Night road and bokeh — manual grade, no develop.auto / preset.apply."
+}

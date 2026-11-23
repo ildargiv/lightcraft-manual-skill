@@ -79,39 +79,68 @@ powershell -ExecutionPolicy Bypass -File <skills>/lightcraft/scripts/start-light
 | `references/addons.md` | アドオン、モデル、コミュニティプロジェクト |
 | `scripts/*` | MCP 起動、アプリ起動、資料更新、アドオン一覧 |
 
-## 例
+Seven Xiaomi 13 Ultra RAW photos from one city shoot, developed by hand. No `develop.auto`,
+no `preset.apply`, no automatic straightening or subject detection. Each result comes with
+its exact settings JSON so you can reproduce it with `lightcraft-cli render`.
 
-同じ撮影（港辺りの川）の Xiaomi 13 Ultra DNG 3 枚を手動で現像しました。各 JPEG は対応する `original.dng` と正確な設定 JSON から `lightcraft-cli render` で生成しています — `develop.auto` も `preset.apply` も自動水平補正も被写体検出も使っていません。
+### River HDR: headroom 3.5 EV, gradient sky mask, local tree mask
 
-### 01 — HDR の川、空のグラデーションと木々のローカルマスク
+![River HDR: headroom 3.5 EV, gradient sky mask, local tree mask — 補正前](../examples/01-river-hdr/before.jpg)
 
-![before](../examples/01-river-hdr/before.jpg)
+![River HDR: headroom 3.5 EV, gradient sky mask, local tree mask — 補正後](../examples/01-river-hdr/after.jpg)
 
-![after](../examples/01-river-hdr/after.jpg)
+- [元 RAW](../examples/01-river-hdr/original.dng) · [手動設定](../examples/settings/01-river-hdr.json)
 
-- [original.dng](../examples/01-river-hdr/original.dng) · [手動設定](../examples/settings/01-river-hdr.json) · [HDR ゲインマップ JPEG](../examples/01-river-hdr/after-hdr-gainmap.jpg)
-- ヘッドルーム 3.5 EV、SDR レンディションを個別調整、`linear` 空マスク + `radial` 木々マスク。
+### Flower shop at blue hour: manual 4200 K balance and split grading
 
-### 02 — ブルーアワー、手動 WB とスプリットトーニング
+![Flower shop at blue hour: manual 4200 K balance and split grading — 補正前](../examples/02-blue-hour/before.jpg)
 
-![before](../examples/02-blue-hour/before.jpg)
+![Flower shop at blue hour: manual 4200 K balance and split grading — 補正後](../examples/02-blue-hour/after.jpg)
 
-![after](../examples/02-blue-hour/after.jpg)
+- [元 RAW](../examples/02-blue-hour/original.dng) · [手動設定](../examples/settings/02-blue-hour.json)
 
-- [original.dng](../examples/02-blue-hour/original.dng) · [手動設定](../examples/settings/02-blue-hour.json)
-- WB 4200 K / +6 tint を手で設定、冷たい影と暖かいハイライト、NR 20/28。
+### Bell tower at blue hour: cool shadows, warm windows, shadow recovery
 
-### 03 — ゴールデンアワー、暖色のローカルマスク
+![Bell tower at blue hour: cool shadows, warm windows, shadow recovery — 補正前](../examples/03-blue-hour-tower/before.jpg)
 
-![before](../examples/03-golden-river/before.jpg)
+![Bell tower at blue hour: cool shadows, warm windows, shadow recovery — 補正後](../examples/03-blue-hour-tower/after.jpg)
 
-![after](../examples/03-golden-river/after.jpg)
+- [元 RAW](../examples/03-blue-hour-tower/original.dng) · [手動設定](../examples/settings/03-blue-hour-tower.json)
 
-- [original.dng](../examples/03-golden-river/original.dng) · [手動設定](../examples/settings/03-golden-river.json)
-- ハイライト −50、シャドウ +35、オレンジ/イエローミキサー、柔らかい放射状の葉マスク。
+### Old town at dusk: 4300 K by hand, architecture and street lights
 
-すべての書き出しは `metadata=none`、長辺 1400 px、JPEG 品質 88。HDR 例にはさらに ISO 21496-1 ゲインマップ（`hdrgm` マーカー確認済み）が含まれます。
+![Old town at dusk: 4300 K by hand, architecture and street lights — 補正前](../examples/04-old-town/before.jpg)
 
+![Old town at dusk: 4300 K by hand, architecture and street lights — 補正後](../examples/04-old-town/after.jpg)
+
+- [元 RAW](../examples/04-old-town/original.dng) · [手動設定](../examples/settings/04-old-town.json)
+
+### Golden moose and city lights: controlled highlights, warm/cool grading
+
+![Golden moose and city lights: controlled highlights, warm/cool grading — 補正前](../examples/05-golden-moose/before.jpg)
+
+![Golden moose and city lights: controlled highlights, warm/cool grading — 補正後](../examples/05-golden-moose/after.jpg)
+
+- [元 RAW](../examples/05-golden-moose/original.dng) · [手動設定](../examples/settings/05-golden-moose.json)
+
+### Night road with bokeh: 4000 K, noise control 25/30, light trails
+
+![Night road with bokeh: 4000 K, noise control 25/30, light trails — 補正前](../examples/06-night-bokeh/before.jpg)
+
+![Night road with bokeh: 4000 K, noise control 25/30, light trails — 補正後](../examples/06-night-bokeh/after.jpg)
+
+- [元 RAW](../examples/06-night-bokeh/original.dng) · [手動設定](../examples/settings/06-night-bokeh.json)
+
+### Evening street: mixed lighting balanced manually, no Auto WB
+
+![Evening street: mixed lighting balanced manually, no Auto WB — 補正前](../examples/07-evening-street/before.jpg)
+
+![Evening street: mixed lighting balanced manually, no Auto WB — 補正後](../examples/07-evening-street/after.jpg)
+
+- [元 RAW](../examples/07-evening-street/original.dng) · [手動設定](../examples/settings/07-evening-street.json)
+
+All exports: `metadata=none`, 1400 px long edge, JPEG quality 88. The HDR example
+additionally writes an ISO 21496-1 gain map (`hdrgm` marker verified).
 ## 自分で確認する
 
 ```powershell
