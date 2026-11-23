@@ -1,0 +1,26 @@
+{
+  "_comment": "Example 02: manual blue-hour grade. Explicit numbers, no Auto Settings, no preset.",
+  "light": {
+    "exposure": 0.7,
+    "contrast": 16,
+    "highlights": -45,
+    "shadows": 25,
+    "whites": 10,
+    "blacks": -18
+  },
+  "wb": { "mode": "custom", "scale": "kelvin", "temp": 4200, "tint": 6 },
+  "color": { "vibrance": 14, "saturation": 0 },
+  "effects": { "texture": 6, "clarity": 10, "dehaze": 6 },
+  "mixer": {
+    "blue": { "hue": 0, "sat": 12, "lum": -4 },
+    "aqua": { "hue": 0, "sat": 8, "lum": 0 },
+    "orange": { "hue": 0, "sat": 6, "lum": 8 }
+  },
+  "grading": {
+    "balance": -8,
+    "blending": 60,
+    "shadows": { "hue": 215, "lum": -5, "sat": 18 },
+    "highlights": { "hue": 35, "lum": 4, "sat": 14 }
+  },
+  "detail": { "nr_luminance": 20, "nr_color": 28, "sharpen_amount": 30, "sharpen_masking": 60 }
+}

@@ -104,17 +104,17 @@ powershell -ExecutionPolicy Bypass -File &lt;skills&gt;/lightcraft/scripts/start
 <h2>Beispiele</h2>
 <p>Drei Xiaomi-13-Ultra-DNGs einer Aufnahmeserie (Fluss am Hafen), von Hand entwickelt. Jedes JPEG wurde mit <code>lightcraft-cli render</code> aus dem jeweiligen <code>original.dng</code> und dem exakten Einstellungs-JSON erzeugt — ohne <code>develop.auto</code>, ohne <code>preset.apply</code>, ohne automatisches Begradigen oder Subjekterkennung.</p>
 <h3>01 — HDR-Fluss, Himmel-Verlauf und lokale Baummaske</h3>
-<p><img src="../../examples/01-river-hdr/before.jpg" alt="vorher" loading="lazy"></p>
-<p><img src="../../examples/01-river-hdr/after.jpg" alt="nachher" loading="lazy"></p>
-<ul><li><a href="../../examples/01-river-hdr/original.dng">original.dng</a> · <a href="../../examples/settings/01-river-hdr.json">manuelle Einstellungen</a> · <a href="../../examples/01-river-hdr/after-hdr-gainmap.jpg">HDR-Gain-Map-JPEG</a></li><li>3,5 EV Spielraum, SDR-Rendition separat eingestellt, <code>linear</code>-Himmelsmaske + <code>radial</code>-Baummaske.</li></ul>
+<p><img src="../examples/01-river-hdr/before.jpg" alt="vorher" loading="lazy"></p>
+<p><img src="../examples/01-river-hdr/after.jpg" alt="nachher" loading="lazy"></p>
+<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/01-river-hdr/original.dng">original.dng</a> · <a href="../examples/settings/01-river-hdr.json">manuelle Einstellungen</a> · <a href="../examples/01-river-hdr/after-hdr-gainmap.jpg">HDR-Gain-Map-JPEG</a></li><li>3,5 EV Spielraum, SDR-Rendition separat eingestellt, <code>linear</code>-Himmelsmaske + <code>radial</code>-Baummaske.</li></ul>
 <h3>02 — Blaue Stunde, manueller WB und Split-Toning</h3>
-<p><img src="../../examples/02-blue-hour/before.jpg" alt="vorher" loading="lazy"></p>
-<p><img src="../../examples/02-blue-hour/after.jpg" alt="nachher" loading="lazy"></p>
-<ul><li><a href="../../examples/02-blue-hour/original.dng">original.dng</a> · <a href="../../examples/settings/02-blue-hour.json">manuelle Einstellungen</a></li><li>WB 4200 K / +6 Tint von Hand, kühle Schatten gegen warme Lichter, NR 20/28.</li></ul>
+<p><img src="../examples/02-blue-hour/before.jpg" alt="vorher" loading="lazy"></p>
+<p><img src="../examples/02-blue-hour/after.jpg" alt="nachher" loading="lazy"></p>
+<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/02-blue-hour/original.dng">original.dng</a> · <a href="../examples/settings/02-blue-hour.json">manuelle Einstellungen</a></li><li>WB 4200 K / +6 Tint von Hand, kühle Schatten gegen warme Lichter, NR 20/28.</li></ul>
 <h3>03 — Goldene Stunde, warme lokale Maske</h3>
-<p><img src="../../examples/03-golden-river/before.jpg" alt="vorher" loading="lazy"></p>
-<p><img src="../../examples/03-golden-river/after.jpg" alt="nachher" loading="lazy"></p>
-<ul><li><a href="../../examples/03-golden-river/original.dng">original.dng</a> · <a href="../../examples/settings/03-golden-river.json">manuelle Einstellungen</a></li><li>Lichter −50, Schatten +35, Orange/Gelb-Mixer, weiche radiale Laubmaske.</li></ul>
+<p><img src="../examples/03-golden-river/before.jpg" alt="vorher" loading="lazy"></p>
+<p><img src="../examples/03-golden-river/after.jpg" alt="nachher" loading="lazy"></p>
+<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/03-golden-river/original.dng">original.dng</a> · <a href="../examples/settings/03-golden-river.json">manuelle Einstellungen</a></li><li>Lichter −50, Schatten +35, Orange/Gelb-Mixer, weiche radiale Laubmaske.</li></ul>
 <p>Alle Exporte verwenden <code>metadata=none</code>, 1400 px lange Kante und JPEG-Qualität 88. Das HDR-Beispiel enthält zusätzlich eine ISO-21496-1-Gain-Map (Marker <code>hdrgm</code> geprüft).</p>
 <h2>Selbst prüfen</h2>
 <pre><code>
@@ -129,7 +129,7 @@ lightcraft-cli render examples/01-river-hdr/original.dng -o repro.jpg \
 <h2>Grenzen</h2>
 <ul><li>LightCraft ist alpha (0.21.1); eine offizielle Plugin-API gibt es noch nicht — „Add-ons" sind importierte Presets/Profile/Modelle und externe Werkzeuge.</li><li>SAM 3 ist nicht enthalten (≈3,4 GB, Meta-Lizenz); Object/Describe-Masken benötigen es. Sky/Subject/Background funktionieren ohne.</li><li>LightCraft kann HDR nicht auf dem Bildschirm anzeigen: Vorschauen sind immer SDR. Beurteilen Sie HDR anhand der exportierten Gain-Map / PQ-Datei.</li><li>Die Drittanbieter-Repositories in <code>addons.md</code> sind inoffiziell und ungeprüft; prüfen Sie Code und Lizenzen vor der Verwendung.</li></ul>
 <h2>Lizenz</h2>
-<p>MIT — siehe <a href="../../LICENSE">LICENSE</a>. Skill-Text und Skripte sind Originalarbeiten. LightCraft selbst ist ein eigenständiges Projekt des ArtCraft-Teams (MIT OR Apache-2.0). Die Beispiel-DNGs bleiben Eigentum ihres Autors und dienen nur der Demonstration.</p>
+<p>MIT — siehe <a href="https://github.com/ildargiv/lightcraft-manual-skill/blob/main/LICENSE">LICENSE</a>. Skill-Text und Skripte sind Originalarbeiten. LightCraft selbst ist ein eigenständiges Projekt des ArtCraft-Teams (MIT OR Apache-2.0). Die Beispiel-DNGs bleiben Eigentum ihres Autors und dienen nur der Demonstration.</p>
 <hr>
 <p>Gemacht für einen Agenten, der Knöpfe drücken kann, aber lieber von Hand arbeitet.</p>
 </main>

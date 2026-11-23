@@ -104,17 +104,17 @@ powershell -ExecutionPolicy Bypass -File &lt;skills&gt;/lightcraft/scripts/start
 <h2>示例</h2>
 <p>同一组拍摄中的三张 Xiaomi 13 Ultra DNG（港口边的河），全部手工处理。每张 JPEG 都由 <code>lightcraft-cli render</code> 从对应 <code>original.dng</code> 加精确设置 JSON 生成——没有 <code>develop.auto</code>、没有 <code>preset.apply</code>、没有自动拉直或主体识别。</p>
 <h3>01 — HDR 河景，天空渐变 + 局部树木蒙版</h3>
-<p><img src="../../examples/01-river-hdr/before.jpg" alt="before" loading="lazy"></p>
-<p><img src="../../examples/01-river-hdr/after.jpg" alt="after" loading="lazy"></p>
-<ul><li><a href="../../examples/01-river-hdr/original.dng">original.dng</a> · <a href="../../examples/settings/01-river-hdr.json">手工设置</a> · <a href="../../examples/01-river-hdr/after-hdr-gainmap.jpg">HDR gain-map JPEG</a></li><li>动态范围余量 3.5 EV，SDR 呈现单独调整，<code>linear</code> 天空蒙版 + <code>radial</code> 树木蒙版。</li></ul>
+<p><img src="../examples/01-river-hdr/before.jpg" alt="before" loading="lazy"></p>
+<p><img src="../examples/01-river-hdr/after.jpg" alt="after" loading="lazy"></p>
+<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/01-river-hdr/original.dng">original.dng</a> · <a href="../examples/settings/01-river-hdr.json">手工设置</a> · <a href="../examples/01-river-hdr/after-hdr-gainmap.jpg">HDR gain-map JPEG</a></li><li>动态范围余量 3.5 EV，SDR 呈现单独调整，<code>linear</code> 天空蒙版 + <code>radial</code> 树木蒙版。</li></ul>
 <h3>02 — 蓝调时刻，手工白平衡与分离色调</h3>
-<p><img src="../../examples/02-blue-hour/before.jpg" alt="before" loading="lazy"></p>
-<p><img src="../../examples/02-blue-hour/after.jpg" alt="after" loading="lazy"></p>
-<ul><li><a href="../../examples/02-blue-hour/original.dng">original.dng</a> · <a href="../../examples/settings/02-blue-hour.json">手工设置</a></li><li>手动设置 WB 4200 K / +6 tint，冷阴影对暖高光，降噪 20/28。</li></ul>
+<p><img src="../examples/02-blue-hour/before.jpg" alt="before" loading="lazy"></p>
+<p><img src="../examples/02-blue-hour/after.jpg" alt="after" loading="lazy"></p>
+<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/02-blue-hour/original.dng">original.dng</a> · <a href="../examples/settings/02-blue-hour.json">手工设置</a></li><li>手动设置 WB 4200 K / +6 tint，冷阴影对暖高光，降噪 20/28。</li></ul>
 <h3>03 — 金色时刻，暖色局部蒙版</h3>
-<p><img src="../../examples/03-golden-river/before.jpg" alt="before" loading="lazy"></p>
-<p><img src="../../examples/03-golden-river/after.jpg" alt="after" loading="lazy"></p>
-<ul><li><a href="../../examples/03-golden-river/original.dng">original.dng</a> · <a href="../../examples/settings/03-golden-river.json">手工设置</a></li><li>高光 −50、阴影 +35、橙黄 HSL、柔和的放射状树叶蒙版。</li></ul>
+<p><img src="../examples/03-golden-river/before.jpg" alt="before" loading="lazy"></p>
+<p><img src="../examples/03-golden-river/after.jpg" alt="after" loading="lazy"></p>
+<ul><li><a href="https://raw.githubusercontent.com/ildargiv/lightcraft-manual-skill/main/examples/03-golden-river/original.dng">original.dng</a> · <a href="../examples/settings/03-golden-river.json">手工设置</a></li><li>高光 −50、阴影 +35、橙黄 HSL、柔和的放射状树叶蒙版。</li></ul>
 <p>所有导出均使用 <code>metadata=none</code>、长边 1400 px、JPEG 质量 88。HDR 示例额外写入 ISO 21496-1 gain map（已验证 <code>hdrgm</code> 标记）。</p>
 <h2>自行验证</h2>
 <pre><code>
@@ -129,7 +129,7 @@ lightcraft-cli render examples/01-river-hdr/original.dng -o repro.jpg \
 <h2>限制</h2>
 <ul><li>LightCraft 仍处于 alpha（0.21.1），尚无官方插件 API——「扩展」指导入的预设/配置文件/模型以及外部工具。</li><li>SAM 3 不随程序分发（约 3.4 GB，Meta 许可）；Object/Describe 蒙版需要它。Sky/Subject/Background 无需即可工作。</li><li>LightCraft 无法在屏幕上显示 HDR：预览始终为 SDR。请通过导出的 gain map / PQ 文件判断 HDR。</li><li><code>addons.md</code> 中的第三方仓库均为非官方且未经核实；使用前请检查代码和许可证。</li></ul>
 <h2>许可证</h2>
-<p>MIT — 见 <a href="../../LICENSE">LICENSE</a>。技能文本和脚本为原创作品。LightCraft 本身是 ArtCraft 团队的独立项目（MIT OR Apache-2.0）。示例 DNG 版权归其작가所有，仅用于演示。</p>
+<p>MIT — 见 <a href="https://github.com/ildargiv/lightcraft-manual-skill/blob/main/LICENSE">LICENSE</a>。技能文本和脚本为原创作品。LightCraft 本身是 ArtCraft 团队的独立项目（MIT OR Apache-2.0）。示例 DNG 版权归其작가所有，仅用于演示。</p>
 <hr>
 <p>为会按按钮、但更愿意动手工作的代理而作。</p>
 </main>
