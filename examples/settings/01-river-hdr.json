@@ -1,0 +1,124 @@
+{
+  "_comment": "Example 01: manual HDR grade of Xiaomi 13 Ultra DNG, river near the port. All numbers set by hand; no develop.auto, no preset.apply, no Auto Straighten.",
+  "light": {
+    "exposure": 0.15,
+    "contrast": 18,
+    "highlights": -55,
+    "shadows": 40,
+    "whites": 15,
+    "blacks": -15
+  },
+  "hdr": {
+    "enabled": true,
+    "max_ev": 3.5,
+    "sdr_brightness": 8,
+    "sdr_contrast": 12,
+    "sdr_highlights": -30,
+    "sdr_shadows": 25,
+    "sdr_whites": 10,
+    "sdr_clarity": 12
+  },
+  "color": {
+    "vibrance": 18,
+    "saturation": 2
+  },
+  "effects": {
+    "texture": 8,
+    "clarity": 12,
+    "dehaze": 8
+  },
+  "curve": {
+    "highlights": -6,
+    "lights": 8,
+    "darks": -6,
+    "shadows": 6
+  },
+  "grading": {
+    "balance": -8,
+    "blending": 55,
+    "highlights": {
+      "hue": 40,
+      "lum": 4,
+      "sat": 10
+    },
+    "shadows": {
+      "hue": 210,
+      "lum": -3,
+      "sat": 12
+    }
+  },
+  "detail": {
+    "sharpen_amount": 45,
+    "sharpen_masking": 40,
+    "nr_color": 20
+  },
+  "vignette": {
+    "amount": -12,
+    "feather": 70
+  },
+  "masks": [
+    {
+      "id": 1,
+      "name": "sky",
+      "visible": true,
+      "invert": false,
+      "on_photo": true,
+      "adjust": {
+        "amount": 100,
+        "exposure": -0.3,
+        "dehaze": 8,
+        "temp": -8,
+        "color_sat": 6
+      },
+      "components": [
+        {
+          "op": "add",
+          "invert": false,
+          "shape": {
+            "kind": "linear",
+            "start": {
+              "x": 0.5,
+              "y": 0.0
+            },
+            "end": {
+              "x": 0.5,
+              "y": 0.45
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "trees",
+      "visible": true,
+      "invert": false,
+      "on_photo": true,
+      "adjust": {
+        "amount": 100,
+        "exposure": 0.2,
+        "temp": 15,
+        "clarity": 8,
+        "texture": 10
+      },
+      "components": [
+        {
+          "op": "add",
+          "invert": false,
+          "shape": {
+            "kind": "radial",
+            "center": {
+              "x": 0.2,
+              "y": 0.35
+            },
+            "rx": 0.22,
+            "ry": 0.3,
+            "angle": 0,
+            "feather": 50,
+            "invert": false
+          }
+        }
+      ]
+    }
+  ]
+}

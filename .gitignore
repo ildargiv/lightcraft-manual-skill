@@ -1,0 +1,8 @@
+# generated / local-only
+*.log
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+.repro/
+repro.jpg
